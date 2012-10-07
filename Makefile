@@ -42,11 +42,11 @@ install:
 	@git submodule update --recursive                                                  # download it's contents
 	@sudo cp ./tools/n/bin/n $(PREFIX)/bin                                             # install n for node.js version management
 	@sudo n stable                                                                     # install the latest node.js stable
-	@curl https://npmjs.org/install.sh | sudo sh                                        # install npm, node package management
+	@curl https://npmjs.org/install.sh | sudo sh                                       # install npm, node package management
 	@cd ./git/git-extras && sudo make install                                          # install git-extras
 	@cd ./tools/spot && sudo make install                                              # install spot search util
 ifeq ($(shell which rake), )
-	@cd ./tools/dotjs && sudo rake install                                                  # install .js folder extenstion
+	@cd ./tools/dotjs && sudo rake install                                             # install .js folder extenstion
 endif
 	@$(MAKE) symlink                                                                   # install all the symlinks
 
@@ -59,7 +59,8 @@ symlink:
 	@ln -s -f $(CURDIR)/vim/.vim $(HOME)                                               # add the .vim directory
 	@ln -s -f $(CURDIR)/.jshintrc $(HOME)                                              # add the .jshintrc
 	@ln -s -f $(CURDIR)/.js $(HOME)                                                    # add the .js folder
-	@ln -s -f $(CURDIR)/.ssh/config $(HOME)/.ssh/config                                                    # add the .js folder
+	@ln -s -f $(CURDIR)/.ssh/config $(HOME)/.ssh/config                                # some ssh defaults 
+	@ln -s -f $(CURDIR)/.bash_login $(HOME)                                            # nice colored bash line
 
 uninstall:
 	@cd ./tools/dotjs && rake uninstall                                                # remove dotjs again
