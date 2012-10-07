@@ -46,7 +46,7 @@ install:
 	@cd ./git/git-extras && sudo make install                                          # install git-extras
 	@cd ./tools/spot && sudo make install                                              # install spot search util
 ifeq ($(shell which rake), )
-	@cd ./tools/dotjs && rake install                                                  # install .js folder extenstion
+	@cd ./tools/dotjs && sudo rake install                                                  # install .js folder extenstion
 endif
 	@$(MAKE) symlink                                                                   # install all the symlinks
 
