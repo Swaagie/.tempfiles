@@ -19,9 +19,9 @@ endif
 
 # Exuberant Ctags is required for the vim tag list plugin, it's an updated
 # version of ctags that is shipped on unix by default.
-ifneq ($(shell which exuberant-ctags), )
+ifneq ($(shell which ctags), )
 	@echo "  - Installing Exuberant ctags"
-	@sudo apt-get install exuberant-ctags
+	@sudo apt-get install ctags
 endif
 
 # Make sure we have curl installed
