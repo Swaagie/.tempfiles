@@ -31,9 +31,9 @@ ifeq ($(shell which curl), )
 	@sudo apt-get install curl
 endif
 
-ifeq ($(shell grep 'PS1' $(HOME)/.profile | wc -l), 0)
+ifeq ($(shell grep 'PS1' $(HOME)/.bashrc | wc -l), 0)
 	@echo "  - Adding colourful bash line to .profile"
-	@echo $(PS1) >> $(HOME)/.profile
+	@echo $(PS1) >> $(HOME)/.bashrc
 endif
 
 
