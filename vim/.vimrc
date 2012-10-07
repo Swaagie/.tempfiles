@@ -15,12 +15,17 @@ set ofu=syntaxcomplete#Complete
 
 " Auto commands for easier file editing
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType make setlocal noexpandtab
 autocmd BufRead,BufNewFile,BufEnter *.json set ft=javascript
 autocmd BufRead,BufNewFile,BufEnter *.ejs set ft=html
-autocmd BufRead,BufNewFile,BufEnter *.tt2 set ft=tt2html
-autocmd BufRead,BufNewFile,BufEnter *.styl.css set ft=stylus
-autocmd BufWritePre *.{json,styl,jade,php,py,pl,js,css,html} call StripTrailingWhite()
+autocmd BufRead,BufNewFile,BufEnter *.twig set ft=html
+autocmd BufRead,BufNewFile,BufEnter *.styl set ft=stylus
+autocmd BufRead,BufNewFile,BufEnter *.less set ft=css
+autocmd BufWritePre *.{json,styl,jade,php,py,pl,js,css,html,phtml} call StripTrailingWhite()
 autocmd FileType gitcommit DiffGitCached | wincmd P | wincmd L | wincmd p
 
 " Go back to the line where you last edited it
@@ -268,18 +273,22 @@ if has('gui_running')
   hi Todo gui=undercurl
 endif
 
-" better macvim support
-if has('gui_macvim')
-  behave xterm
-  set selectmode=
-  set keymodel=
-  set mousemodel=popup_setpos
-endif
-
 " map the :make command to ,, and have it auto open the quickfix window
 nmap <Leader><Leader> :w<CR>:make! \| botright cwindow<CR>
 
+" Syntastic
+let g:syntastic_javascript_checker = 'jshint'
+let g:syntastic_auto_loc_list=1
+let g:syntastic_phpcs_disable=1
+
 syntax on
+
+" 'quote' a word
+nnoremap qw :silent! normal mpea'<Esc>bi'<Esc>`pl
+" double "quote" a word
+nnoremap qd :silent! normal mpea"<Esc>bi"<Esc>`pl
+" remove quotes from a word
+nnoremap wq :silent! normal mpeld bhd `ph<CR>
 
 " change the color of the errors, because it's purple bg with pink text by
 " default... 
