@@ -1,5 +1,6 @@
 PREFIX ?= /usr/local
 HOME ?= ~/
+PS1 ?= "PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] \[\e[1;37m\] '"
 
 target: symlink
 
@@ -29,6 +30,12 @@ ifeq ($(shell which curl), )
 	@echo "  - Installing curl"
 	@sudo apt-get install curl
 endif
+
+ifeq ($(shell grep 'PS1' $(HOME)/.profile | wc -l), 0)
+	@echo "  - Adding colourful bash line to .profile"
+	@echo $(PS1) >> $(HOME)/.profile
+endif
+
 
 # Installation:
 # Install all the .sh files and git submodules so our env. will be a bit easier
@@ -60,7 +67,6 @@ symlink:
 	@ln -s -f $(CURDIR)/.jshintrc $(HOME)                                              # add the .jshintrc
 	@ln -s -f $(CURDIR)/.js $(HOME)                                                    # add the .js folder
 	@ln -s -f $(CURDIR)/.ssh/config $(HOME)/.ssh/config                                # some ssh defaults 
-	@ln -s -f $(CURDIR)/.bash_login $(HOME)                                            # nice colored bash line
 
 uninstall:
 	@cd ./tools/dotjs && rake uninstall                                                # remove dotjs again
