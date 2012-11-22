@@ -11,6 +11,15 @@ target: symlink
 # @TODO automatically install mac ports
 # @TODO automatically install and configure VIM with clipboard support
 dependencies:
+# Some general dependencies
+ifeq ($(shell which vim), )
+@sudo apt-get install vim 
+endif
+
+ifeq ($(shell which g++), )
+@sudo apt-get install g++ 
+endif
+
 # rake is required for the .dotjs chrome extension, and might be commonly used
 # by other software as it's an alternate to Make
 ifeq ($(shell which rake), )
@@ -31,11 +40,8 @@ ifeq ($(shell which curl), )
 	@sudo apt-get install curl
 endif
 
-ifeq ($(shell grep 'PS1' $(HOME)/.bashrc | wc -l), 0)
 	@echo "  - Adding colourful bash line to .profile"
 	@echo $(PS1) >> $(HOME)/.bashrc
-endif
-
 
 # Installation:
 # Install all the .sh files and git submodules so our env. will be a bit easier
