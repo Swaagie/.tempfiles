@@ -113,4 +113,4 @@
 	url = git://github.com/guns/xterm-color-table.vim.git
 [submodule "vim/.vim/bundle/syntastic"]
 	path = vim/.vim/bundle/syntastic
-	url = git@github.com:3rd-Eden/syntastic.git
+	url = git@github.com:Swaagie/syntastic.git
