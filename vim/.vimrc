@@ -120,9 +120,6 @@ set textwidth=80
 set formatoptions=qrn1
 set colorcolumn=85
 
-" Enable mouse in CLI
-set mouse=a
-
 " Show list chars
 set list
 
@@ -293,3 +290,8 @@ nnoremap wq :silent! normal mpeld bhd `ph<CR>
 " change the color of the errors, because it's purple bg with pink text by
 " default... 
 hi Error ctermbg=9 ctermfg=15
+
+" Allow copy paste to the GVIM
+nmap <C-V> "+gP
+imap <C-V> <ESC><C-V>i
+vmap <C-C> "+y
