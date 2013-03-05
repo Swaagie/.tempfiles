@@ -120,9 +120,6 @@ set textwidth=80
 set formatoptions=qrn1
 set colorcolumn=85
 
-" Enable mouse in CLI
-set mouse=a
-
 " Show list chars
 set list
 

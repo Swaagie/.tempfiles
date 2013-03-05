@@ -22,5 +22,7 @@
       , "after"                   // -- BDD unit tests
       , "before"                  // -- BDD unit tests
       , "Backbone"                // -- backbone.js mvc library
+      , "alert"                   // -- sometimes we need to alert
+      , "Cortex"                  // -- RVP stack of awesomeness
     ]
 }
