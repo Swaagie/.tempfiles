@@ -25,7 +25,7 @@ autocmd BufRead,BufNewFile,BufEnter *.ejs set ft=html
 autocmd BufRead,BufNewFile,BufEnter *.twig set ft=html
 autocmd BufRead,BufNewFile,BufEnter *.styl set ft=stylus
 autocmd BufRead,BufNewFile,BufEnter *.less set ft=css
-autocmd BufWritePre *.{json,styl,jade,php,py,pl,js,ejs,css,html,phtml} call StripTrailingWhite()
+autocmd BufWritePre *.{json,styl,jade,php,py,pl,js,ejs,css,html,phtml,md} call StripTrailingWhite()
 autocmd FileType gitcommit DiffGitCached | wincmd P | wincmd L | wincmd p
 
 " Go back to the line where you last edited it
