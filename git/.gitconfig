@@ -55,3 +55,6 @@
   ; Github url shortening
   ; https://github.com/blog/985-git-io-github-url-shortener
   shorten = "!sh -c 'curl -i http://git.io -F url=$1' -"
+
+[remote "origin"]
+  fetch = +refs/pull/*/head:refs/remotes/origin/pr/*
