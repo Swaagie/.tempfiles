@@ -12,8 +12,8 @@ target: symlink
 # @TODO automatically install and configure VIM with clipboard support
 dependencies:
 # Some general dependencies
-ifeq ($(shell which vim), )
-@sudo apt-get install vim 
+ifeq ($(shell which gvim), )
+@sudo apt-get install gvim 
 endif
 
 ifeq ($(shell which g++), )
@@ -56,11 +56,8 @@ install:
 	@sudo cp ./tools/n/bin/n $(PREFIX)/bin                                             # install n for node.js version management
 	@sudo n stable                                                                     # install the latest node.js stable
 	@curl https://npmjs.org/install.sh | sudo sh                                       # install npm, node package management
-	@cd ./git/git-extras && sudo make install                                          # install git-extras
-	@cd ./tools/spot && sudo make install                                              # install spot search util
-ifeq ($(shell which rake), )
-	@cd ./tools/dotjs && sudo rake install                                             # install .js folder extenstion
-endif
+	@sudo npm install jshint -g
+	@sudo npm install csshint -g
 	@$(MAKE) symlink                                                                   # install all the symlinks
 
 # Symlinking:
