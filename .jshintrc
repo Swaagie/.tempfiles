@@ -15,7 +15,6 @@
   , "predef": [                   // pre-defined globals that are use commonly
         "_"                       // -- underscore library
       , "$"                       // -- jQuery library
-      , "logger"                  // -- global logger
       , "should"                  // -- should.js assertation library
       , "describe"                // -- BDD unit tests
       , "it"                      // -- BDD unit tests
