@@ -20,5 +20,6 @@
       , "before"                  // -- BDD unit tests
       , "alert"                   // -- sometimes we need to alert
       , "Cortex"                  // -- RVP stack of awesomeness
+      , "setImmediate"            // -- Node 0.10.x functionality
     ]
 }
