@@ -1,23 +1,22 @@
 PREFIX ?= /usr/local
 HOME ?= ~/
-PS1 ?= "PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] \[\e[1;37m\] '"
+PS1="\nPS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] \[\e[1;37m\] '"
+PS2="source $$HOME/.files/tools/smith/smith.sh"
 
 target: symlink
 
 # Dependencies:
 # These pieces of software are required for the full installation of all the
 # required code.
-#
-# @TODO automatically install mac ports
-# @TODO automatically install and configure VIM with clipboard support
+
 dependencies:
-# Some general dependencies
+
 ifeq ($(shell which gvim), )
-@sudo apt-get install gvim 
+	@sudo apt-get install vim-gnome
 endif
 
 ifeq ($(shell which g++), )
-@sudo apt-get install g++ 
+	@sudo apt-get install g++ 
 endif
 
 # rake is required for the .dotjs chrome extension, and might be commonly used
@@ -40,15 +39,16 @@ ifeq ($(shell which curl), )
 	@sudo apt-get install curl
 endif
 
-	@echo "  - Adding colourful bash line to .profile"
+	@echo "  - Adding colourful bash liwne to .bashrc"
 	@echo $(PS1) >> $(HOME)/.bashrc
+
+	@echo "  - Adding agent Smith to .bashrc"
+	@echo $(PS2) >> $(HOME)/.bashrc
 
 # Installation:
 # Install all the .sh files and git submodules so our env. will be a bit easier
 # to work with, and it will look pretty as well <3.
 #
-# @TODO install jshint for syntasic (npm install jshint -g)
-# @TODO install csslint for syntastic (npm install csshint -g)
 install:
 	@$(MAKE) dependencies                                                              # install the dependencies
 	@git submodule init                                                                # init submodules
@@ -57,7 +57,7 @@ install:
 	@sudo n stable                                                                     # install the latest node.js stable
 	@curl https://npmjs.org/install.sh | sudo sh                                       # install npm, node package management
 	@sudo npm install jshint -g
-	@sudo npm install csshint -g
+	@sudo npm install csslint -g
 	@$(MAKE) symlink                                                                   # install all the symlinks
 
 # Symlinking:

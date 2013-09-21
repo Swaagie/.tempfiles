@@ -6,10 +6,6 @@
 	path = vim/.vim/bundle/snipmate-nodejs
 	url = https://github.com/jamescarr/snipmate-nodejs.git
 	ignore = dirty
-[submodule "vim/.vim/bundle/zen-coding"]
-	path = vim/.vim/bundle/zen-coding
-	url = https://github.com/mattn/zencoding-vim.git
-	ignore = dirty
 [submodule "vim/.vim/bundle/surround"]
 	path = vim/.vim/bundle/surround
 	url = https://github.com/tpope/vim-surround
@@ -123,3 +119,9 @@
 [submodule "vim/.vim/bundle/vim-gitgutter"]
 	path = vim/.vim/bundle/vim-gitgutter
 	url = git://github.com/airblade/vim-gitgutter.git
+[submodule "vim/.vim/bundle/emmet-vim"]
+	path = vim/.vim/bundle/emmet-vim
+	url = git@github.com:mattn/emmet-vim.git
+[submodule "tools/smith"]
+	path = tools/smith
+	url = git@github.com:Swaagie/smith.git
