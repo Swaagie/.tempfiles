@@ -1,7 +1,5 @@
 PREFIX ?= /usr/local
 HOME ?= ~/
-PS1="\nPS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] \[\e[1;37m\] '"
-PS2="source $$HOME/.files/tools/smith/smith.sh"
 
 target: symlink
 
@@ -38,12 +36,6 @@ ifeq ($(shell which curl), )
 	@echo "  - Installing curl"
 	@sudo apt-get install curl
 endif
-
-	@echo "  - Adding colourful bash liwne to .bashrc"
-	@echo $(PS1) >> $(HOME)/.bashrc
-
-	@echo "  - Adding agent Smith to .bashrc"
-	@echo $(PS2) >> $(HOME)/.bashrc
 
 # Installation:
 # Install all the .sh files and git submodules so our env. will be a bit easier
