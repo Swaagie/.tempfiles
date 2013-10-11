@@ -285,14 +285,14 @@
       <key>profiles/Default/background_color</key>
       <schema_key>/schemas/apps/gnome-terminal/profiles/Default/background_color</schema_key>
       <value>
-        <string>#FFFFFFFFDDDD</string>
+        <string>#000000000000</string>
       </value>
     </entry>
     <entry>
       <key>profiles/Default/background_darkness</key>
       <schema_key>/schemas/apps/gnome-terminal/profiles/Default/background_darkness</schema_key>
       <value>
-        <float>0.49677399999999999</float>
+        <float>0.41075299999999998</float>
       </value>
     </entry>
     <entry>
@@ -306,7 +306,7 @@
       <key>profiles/Default/background_type</key>
       <schema_key>/schemas/apps/gnome-terminal/profiles/Default/background_type</schema_key>
       <value>
-        <string>transparent</string>
+        <string>solid</string>
       </value>
     </entry>
     <entry>
@@ -320,7 +320,7 @@
       <key>profiles/Default/bold_color</key>
       <schema_key>/schemas/apps/gnome-terminal/profiles/Default/bold_color</schema_key>
       <value>
-        <string>#000000000000</string>
+        <string>#72729F9FCFCF</string>
       </value>
     </entry>
     <entry>
@@ -404,7 +404,7 @@
       <key>profiles/Default/foreground_color</key>
       <schema_key>/schemas/apps/gnome-terminal/profiles/Default/foreground_color</schema_key>
       <value>
-        <string>#000000000000</string>
+        <string>#F3F3F3F3F3F3</string>
       </value>
     </entry>
     <entry>
