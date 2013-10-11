@@ -37,6 +37,11 @@ ifeq ($(shell which curl), )
 	@sudo apt-get install curl
 endif
 
+# 
+# Install default gnome-terminal profile.
+#
+@gconftool-2 --load gnome-terminal-conf.xml
+
 # Installation:
 # Install all the .sh files and git submodules so our env. will be a bit easier
 # to work with, and it will look pretty as well <3.
