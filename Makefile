@@ -42,6 +42,23 @@ endif
 #
 @gconftool-2 --load gnome-terminal-conf.xml
 
+#
+# Install notify-send package
+#
+ifeq ($(shell which notify-osd), )
+	@echo "  - Installing notify-send"
+	@sudo apt-get install notify-osd
+endif
+
+#
+# Setup git-dude for notifications
+#
+@mkdir -p ~/projects
+@cd / && sudo ln -s ~/projects p
+@curl -skL https://github.com/sickill/git-dude/raw/master/git-dude > temp && sudo mv temp /usr/local/bin/git-dude
+@sudo chmod +x /usr/local/bin/git-dude
+@cd ~/.config/autostart/ && ln -s ~/.files/gd.desktop
+
 # Installation:
 # Install all the .sh files and git submodules so our env. will be a bit easier
 # to work with, and it will look pretty as well <3.

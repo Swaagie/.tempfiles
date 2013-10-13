@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Terminal=false
+Exec=/usr/local/bin/git-dude /p & > /dev/null
+Name=Git Dude
