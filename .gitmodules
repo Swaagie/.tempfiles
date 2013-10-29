@@ -125,3 +125,6 @@
 [submodule "tools/smith"]
 	path = tools/smith
 	url = git@github.com:Swaagie/smith.git
+[submodule "vim/.vim/bundle/fontzoom"]
+	path = vim/.vim/bundle/fontzoom
+	url = git@github.com:thinca/vim-fontzoom.git
