@@ -3,7 +3,6 @@
  * the url they are redirecting to in the pathname, so we can intercept it and
  * completely skip the advertisements.
  */
-
 (function skip() {
   'use strict';
 
