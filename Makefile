@@ -37,14 +37,7 @@ ifeq ($(shell which curl), )
 	@sudo apt-get install curl
 endif
 
-# 
-# Install default gnome-terminal profile.
-#
-@gconftool-2 --load gnome-terminal-conf.xml
-
-#
 # Install notify-send package
-#
 ifeq ($(shell which notify-osd), )
 	@echo "  - Installing notify-send"
 	@sudo apt-get install notify-osd
@@ -57,7 +50,6 @@ endif
 @cd / && sudo ln -s ~/projects p
 @curl -skL https://github.com/sickill/git-dude/raw/master/git-dude > temp && sudo mv temp /usr/local/bin/git-dude
 @sudo chmod +x /usr/local/bin/git-dude
-@cd ~/.config/autostart/ && ln -s ~/.files/gd.desktop
 
 # Installation:
 # Install all the .sh files and git submodules so our env. will be a bit easier
@@ -70,8 +62,10 @@ install:
 	@sudo cp ./tools/n/bin/n $(PREFIX)/bin                                             # install n for node.js version management
 	@sudo n stable                                                                     # install the latest node.js stable
 	@curl https://npmjs.org/install.sh | sudo sh                                       # install npm, node package management
+	@sudo npm install dotjs-zen -g
 	@sudo npm install jshint -g
 	@sudo npm install csslint -g
+	@gconftool-2 --load gnome-terminal-conf.xml                                        # Install default gnome-terminal profile.
 	@$(MAKE) symlink                                                                   # install all the symlinks
 
 # Symlinking:
@@ -85,6 +79,10 @@ symlink:
 	@ln -s -f $(CURDIR)/.bash_aliases $(HOME)                                          # add the .bash_aliases
 	@ln -s -f $(CURDIR)/.js $(HOME)                                                    # add the .js folder
 	@ln -s -f $(CURDIR)/.ssh/config $(HOME)/.ssh/config                                # some ssh defaults 
+	@ln -s -f $(CURDIR)/gd.desktop $(HOME)/.config/autostart/                          # start git-dude at startup
+	@ln -s -f $(CURDIR)/djsd.desktop $(HOME)/.config/autostart/                        # start dotjs at startup
+	@sudo ln -s -f $(CURDIR)/tools/dotjs-zen/dotjsd.js /usr/local/bin/djsd             # create dotjs deamon
+
 
 uninstall:
 	@cd ./tools/dotjs && rake uninstall                                                # remove dotjs again

@@ -125,6 +125,3 @@
 [submodule "vim/.vim/bundle/fontzoom"]
 	path = vim/.vim/bundle/fontzoom
 	url = git@github.com:thinca/vim-fontzoom.git
-[submodule "tools/dotjs-zen"]
-	path = tools/dotjs-zen
-	url = git@github.com:nathan7/dotjs-zen.git
