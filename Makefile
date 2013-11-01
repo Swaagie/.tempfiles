@@ -57,6 +57,7 @@ install:
 	@sudo npm install dotjs-zen -g
 	@sudo npm install jshint -g
 	@sudo npm install csslint -g
+	@sudo rm -rf $(HOME)/.npm $(HOME)/tmp
 	@mkdir -p ~/projects
 	@curl -skL https://github.com/sickill/git-dude/raw/master/git-dude > temp && sudo mv temp /usr/local/bin/git-dude
 	@sudo chmod +x /usr/local/bin/git-dude
