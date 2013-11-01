@@ -125,3 +125,6 @@
 [submodule "vim/.vim/bundle/fontzoom"]
 	path = vim/.vim/bundle/fontzoom
 	url = git@github.com:thinca/vim-fontzoom.git
+[submodule "tools/dotfiles"]
+	path = tools/dotfiles
+	url = git@github.com:Swaagie/dotfiles.git

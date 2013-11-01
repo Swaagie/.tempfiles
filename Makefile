@@ -43,14 +43,6 @@ ifeq ($(shell which notify-osd), )
 	@sudo apt-get install notify-osd
 endif
 
-#
-# Setup git-dude for notifications
-#
-@mkdir -p ~/projects
-@cd / && sudo ln -s ~/projects p
-@curl -skL https://github.com/sickill/git-dude/raw/master/git-dude > temp && sudo mv temp /usr/local/bin/git-dude
-@sudo chmod +x /usr/local/bin/git-dude
-
 # Installation:
 # Install all the .sh files and git submodules so our env. will be a bit easier
 # to work with, and it will look pretty as well <3.
@@ -65,6 +57,9 @@ install:
 	@sudo npm install dotjs-zen -g
 	@sudo npm install jshint -g
 	@sudo npm install csslint -g
+	@mkdir -p ~/projects
+	@curl -skL https://github.com/sickill/git-dude/raw/master/git-dude > temp && sudo mv temp /usr/local/bin/git-dude
+	@sudo chmod +x /usr/local/bin/git-dude
 	@gconftool-2 --load gnome-terminal-conf.xml                                        # Install default gnome-terminal profile.
 	@$(MAKE) symlink                                                                   # install all the symlinks
 
@@ -82,7 +77,8 @@ symlink:
 	@ln -s -f $(CURDIR)/gd.desktop $(HOME)/.config/autostart/                          # start git-dude at startup
 	@ln -s -f $(CURDIR)/djsd.desktop $(HOME)/.config/autostart/                        # start dotjs at startup
 	@sudo ln -s -f $(CURDIR)/tools/dotjs-zen/dotjsd.js /usr/local/bin/djsd             # create dotjs deamon
-
+	@sudo ln -s -f $(HOME)/projects/ /p                                                # create quick link to projects
+	@ln -s $(CURDIR)/tools/dotfiles/confs/.* $(HOME)
 
 uninstall:
 	@cd ./tools/dotjs && rake uninstall                                                # remove dotjs again
