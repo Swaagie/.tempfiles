@@ -27,6 +27,7 @@ autocmd BufRead,BufNewFile,BufEnter *.styl set ft=stylus
 autocmd BufRead,BufNewFile,BufEnter *.less set ft=css
 autocmd BufWritePre *.{json,styl,jade,php,py,pl,js,ejs,css,html,phtml,md,markdown} call StripTrailingWhite()
 autocmd FileType gitcommit DiffGitCached | wincmd P | wincmd L | wincmd p
+au FileType javascript set dictionary+=$HOME/.files/vim/.vim/bundle/vim-node/dict/node.dict
 
 " Go back to the line where you last edited it
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif

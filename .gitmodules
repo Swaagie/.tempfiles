@@ -107,9 +107,6 @@
 [submodule "vim/.vim/bundle/syntastic"]
 	path = vim/.vim/bundle/syntastic
 	url = git@github.com:Swaagie/syntastic.git
-[submodule "vim/.vim/bundle/vim-nodejs-complete"]
-	path = vim/.vim/bundle/vim-nodejs-complete
-	url = https://github.com/myhere/vim-nodejs-complete.git
 [submodule "vim/.vim/bundle/vim-node"]
 	path = vim/.vim/bundle/vim-node
 	url = https://github.com/guileen/vim-node.git
