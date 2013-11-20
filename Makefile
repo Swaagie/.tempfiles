@@ -73,7 +73,7 @@ symlink:
 	@ln -s -f $(CURDIR)/vim/.vim $(HOME)                                               # add the .vim directory
 	@ln -s -f $(CURDIR)/.jshintrc $(HOME)                                              # add the .jshintrc
 	@ln -s -f $(CURDIR)/.bash_aliases $(HOME)                                          # add the .bash_aliases
-	@ln -s -f $(CURDIR)/.js $(HOME)                                                    # add the .js folder
+	@ln -s -f $(HOME)/dotfiles/.js $(HOME)                                             # add the .js folder
 	@ln -s -f $(CURDIR)/.ssh/config $(HOME)/.ssh/config                                # some ssh defaults 
 	@ln -s -f $(CURDIR)/gd.desktop $(HOME)/.config/autostart/                          # start git-dude at startup
 	@ln -s -f $(CURDIR)/djsd.desktop $(HOME)/.config/autostart/                        # start dotjs at startup
