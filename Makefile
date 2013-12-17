@@ -77,7 +77,6 @@ symlink:
 	@ln -s -f $(CURDIR)/.ssh/config $(HOME)/.ssh/config                                # some ssh defaults 
 	@ln -s -f $(CURDIR)/gd.desktop $(HOME)/.config/autostart/                          # start git-dude at startup
 	@ln -s -f $(CURDIR)/djsd.desktop $(HOME)/.config/autostart/                        # start dotjs at startup
-	@sudo ln -s -f $(CURDIR)/tools/dotjs-zen/dotjsd.js /usr/local/bin/djsd             # create dotjs deamon
 	@sudo ln -s -f $(HOME)/projects/ /p                                                # create quick link to projects
 	@ln -s $(CURDIR)/tools/dotfiles/confs/.* $(HOME)
 
