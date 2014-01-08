@@ -295,10 +295,5 @@ hi Error ctermbg=9 ctermfg=15
 " Setup default guifont
 set guifont=Monospace\ 10
 
-" Allow normal copy pasting to vim-gnome
-nmap <C-V> "+gP
-imap <C-V> <ESC><C-V>i
-vmap <C-C> "+y
-
 " Enable spell check against English
 nmap <F5> :setlocal spell! spelllang=en_us<CR>
