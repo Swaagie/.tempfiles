@@ -37,6 +37,12 @@ ifeq ($(shell which curl), )
 	@sudo apt-get install curl
 endif
 
+# Make sure extra git functionality is installed
+ifeq ($(shell which git-extras), )
+	@echo "  - Installing git-extras"
+	@sudo apt-get install git-extras 
+endif
+
 # Install notify-send package
 ifeq ($(shell which notify-osd), )
 	@echo "  - Installing notify-send"
