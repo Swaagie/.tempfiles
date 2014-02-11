@@ -83,6 +83,7 @@ symlink:
 	@ln -s -f $(CURDIR)/gd.desktop $(HOME)/.config/autostart/                          # start git-dude at startup
 	@ln -s -f $(CURDIR)/djsd.desktop $(HOME)/.config/autostart/                        # start dotjs at startup
 	@sudo ln -s -f $(HOME)/projects/ /p                                                # create quick link to projects
+	@ln -s -f $(CURDIR)/sublime-text-3/ $(HOME)/.config
 
 uninstall:
 	@cd ./tools/dotjs && rake uninstall                                                # remove dotjs again

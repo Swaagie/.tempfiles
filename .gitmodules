@@ -118,3 +118,6 @@
 [submodule "localcomplete"]
 	path = vim/.vim/bundle/vim-nodejs-complete
 	url = git@github.com:myhere/vim-nodejs-complete.git 
+[submodule "sublime-text-3/Packages/Package Control"]
+	path = sublime-text-3/Packages/Package Control
+	url = git@github.com:wbond/sublime_package_control.git
