@@ -53,7 +53,6 @@ install:
 	@git submodule update --recursive                                                  # download it's contents
 	@sudo cp ./tools/n/bin/n $(PREFIX)/bin                                             # install n for node.js version management
 	@sudo n stable                                                                     # install the latest node.js stable
-	@curl https://npmjs.org/install.sh | sudo sh                                       # install npm, node package management
 	@sudo npm install dotjs-zen -g
 	@sudo npm install jshint -g
 	@sudo npm install csslint -g
@@ -78,7 +77,6 @@ symlink:
 	@ln -s -f $(CURDIR)/gd.desktop $(HOME)/.config/autostart/                          # start git-dude at startup
 	@ln -s -f $(CURDIR)/djsd.desktop $(HOME)/.config/autostart/                        # start dotjs at startup
 	@sudo ln -s -f $(HOME)/projects/ /p                                                # create quick link to projects
-	@ln -s $(CURDIR)/tools/dotfiles/confs/.* $(HOME)
 
 uninstall:
 	@cd ./tools/dotjs && rake uninstall                                                # remove dotjs again
