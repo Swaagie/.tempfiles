@@ -19,22 +19,6 @@
 			},
 			"buffers":
 			[
-				{
-					"file": "/home/swaagie/projects/home/server/index.js",
-					"settings":
-					{
-						"buffer_size": 6664,
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"file": "/home/swaagie/.files/Makefile",
-					"settings":
-					{
-						"buffer_size": 3999,
-						"line_ending": "Unix"
-					}
-				}
 			],
 			"build_system": "",
 			"command_palette":
@@ -67,6 +51,9 @@
 			},
 			"file_history":
 			[
+				"/p/home/server/index.js",
+				"/home/swaagie/.files/Makefile",
+				"/home/swaagie/projects/home/server/index.js",
 				"/home/swaagie/dotfiles/confs/.jitsuconf",
 				"/home/swaagie/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings"
 			],
@@ -104,65 +91,8 @@
 			"groups":
 			[
 				{
-					"selected": 1,
 					"sheets":
 					[
-						{
-							"buffer": 0,
-							"file": "/home/swaagie/projects/home/server/index.js",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 6664,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										235,
-										235
-									]
-								],
-								"settings":
-								{
-									"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 1,
-							"type": "text"
-						},
-						{
-							"buffer": 1,
-							"file": "/home/swaagie/.files/Makefile",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 3999,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										2230,
-										2230
-									]
-								],
-								"settings":
-								{
-									"syntax": "Packages/Makefile/Makefile.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 663.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 0,
-							"type": "text"
-						}
 					]
 				}
 			],
@@ -201,7 +131,7 @@
 			{
 				"height": 0.0
 			},
-			"position": "0,0,0,0,0,2880,0,3838,1051,5760,1080",
+			"position": "0,0,0,0,0,1280,27,2558,1411,2560,1440",
 			"project": "",
 			"replace":
 			{

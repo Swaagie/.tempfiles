@@ -4,9 +4,10 @@
 	[
 		"Theme - Flatland"
 	],
-	"startup_sec": 0.119245,
+	"startup_sec": 0.196889,
 	"syntax":
 	{
+		"JavaScript": 1,
 		"Makefile": 1,
 		"Plain text": 1
 	},
