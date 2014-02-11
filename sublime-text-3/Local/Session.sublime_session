@@ -15,6 +15,10 @@
 			{
 				"selected_items":
 				[
+					[
+						"d",
+						"data"
+					]
 				]
 			},
 			"buffers":
@@ -23,9 +27,17 @@
 			"build_system": "",
 			"command_palette":
 			{
-				"height": 75.0,
+				"height": 117.0,
 				"selected_items":
 				[
+					[
+						"install",
+						"Package Control: Install Package"
+					],
+					[
+						"instal",
+						"Package Control: Install Package"
+					],
 					[
 						"Insta",
 						"Package Control: Install Package"
@@ -51,8 +63,10 @@
 			},
 			"file_history":
 			[
-				"/p/home/server/index.js",
+				"/home/swaagie/projects/home/server/view.js",
 				"/home/swaagie/.files/Makefile",
+				"/home/swaagie/projects/home/Makefile",
+				"/p/home/server/index.js",
 				"/home/swaagie/projects/home/server/index.js",
 				"/home/swaagie/dotfiles/confs/.jitsuconf",
 				"/home/swaagie/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings"

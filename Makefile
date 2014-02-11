@@ -61,6 +61,7 @@ install:
 	@sudo n stable                                                                     # install the latest node.js stable
 	@sudo npm install dotjs-zen -g
 	@sudo npm install jshint -g
+	@sudo npm install jslint -g
 	@sudo npm install csslint -g
 	@sudo rm -rf $(HOME)/.npm $(HOME)/tmp
 	@mkdir -p ~/projects

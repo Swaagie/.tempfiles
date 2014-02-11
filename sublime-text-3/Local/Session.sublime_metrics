@@ -2,13 +2,15 @@
 	"licensed": false,
 	"packages":
 	[
+		"SublimeLinter-contrib-jslint",
+		"SublimeLinter-jshint",
 		"Theme - Flatland"
 	],
-	"startup_sec": 0.196889,
+	"startup_sec": 0.18855,
 	"syntax":
 	{
-		"JavaScript": 1,
-		"Makefile": 1,
+		"JavaScript": 10,
+		"Makefile": 2,
 		"Plain text": 1
 	},
 	"time": 1392140232
