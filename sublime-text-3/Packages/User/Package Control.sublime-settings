@@ -1,11 +1,15 @@
 {
 	"installed_packages":
 	[
+		"Emmet",
 		"GitGutter",
 		"Package Control",
+		"Stylus",
 		"SublimeLinter",
 		"SublimeLinter-contrib-jslint",
 		"SublimeLinter-jshint",
-		"Theme - Flatland"
+		"Surround",
+		"Theme - Flatland",
+		"Vintage Surround"
 	]
 }
