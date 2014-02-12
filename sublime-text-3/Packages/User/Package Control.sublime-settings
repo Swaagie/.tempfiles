@@ -1,6 +1,7 @@
 {
 	"installed_packages":
 	[
+		"GitGutter",
 		"Package Control",
 		"SublimeLinter",
 		"SublimeLinter-contrib-jslint",
