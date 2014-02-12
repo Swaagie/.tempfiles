@@ -14,7 +14,7 @@ ifeq ($(shell which gvim), )
 endif
 
 ifeq ($(shell which g++), )
-	@sudo apt-get install g++ 
+	@sudo apt-get install g++
 endif
 
 # rake is required for the .dotjs chrome extension, and might be commonly used
@@ -40,13 +40,31 @@ endif
 # Make sure extra git functionality is installed
 ifeq ($(shell which git-extras), )
 	@echo "  - Installing git-extras"
-	@sudo apt-get install git-extras 
+	@sudo apt-get install git-extras
 endif
 
 # Install notify-send package
 ifeq ($(shell which notify-osd), )
 	@echo "  - Installing notify-send"
 	@sudo apt-get install notify-osd
+endif
+
+# Install shutter
+ifeq ($(shell which shutter), )
+	@echo "  - Installing shutter"
+	@sudo apt-get install shutter
+endif
+
+# Install trimage
+ifeq ($(shell which trimage), )
+	@echo "  - Installing trimage"
+	@sudo apt-get install trimage
+endif
+
+# Install gimp
+ifeq ($(shell which gimp), )
+	@echo "  - Installing gimp"
+	@sudo apt-get install gimp
 endif
 
 # Installation:
@@ -63,6 +81,7 @@ install:
 	@sudo npm install jshint -g
 	@sudo npm install jslint -g
 	@sudo npm install csslint -g
+	@sudo npm install stylus -g
 	@sudo rm -rf $(HOME)/.npm $(HOME)/tmp
 	@mkdir -p ~/projects
 	@curl -skL https://github.com/sickill/git-dude/raw/master/git-dude > temp && sudo mv temp /usr/local/bin/git-dude
@@ -80,11 +99,11 @@ symlink:
 	@ln -s -f $(CURDIR)/.jshintrc $(HOME)                                              # add the .jshintrc
 	@ln -s -f $(CURDIR)/.bash_aliases $(HOME)                                          # add the .bash_aliases
 	@ln -s -f $(HOME)/dotfiles/.js $(HOME)                                             # add the .js folder
-	@ln -s -f $(CURDIR)/.ssh/config $(HOME)/.ssh/config                                # some ssh defaults 
+	@ln -s -f $(CURDIR)/.ssh/config $(HOME)/.ssh/config                                # some ssh defaults
 	@ln -s -f $(CURDIR)/gd.desktop $(HOME)/.config/autostart/                          # start git-dude at startup
 	@ln -s -f $(CURDIR)/djsd.desktop $(HOME)/.config/autostart/                        # start dotjs at startup
-	@sudo ln -s -f $(HOME)/projects/ /p                                                # create quick link to projects
-	@ln -s -f $(CURDIR)/sublime-text-3/ $(HOME)/.config
+  @ln -s -f $(CURDIR)/sublime-text-3/ $(HOME)/.config																 # link sublime3 config
+  @sudo ln -s -f $(HOME)/projects/ /p                                                # create quick link to projects
 
 uninstall:
 	@cd ./tools/dotjs && rake uninstall                                                # remove dotjs again
