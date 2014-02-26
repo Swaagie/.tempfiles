@@ -1,7 +1,9 @@
 {
 	"color_scheme": "Packages/User/Flatland Monokai (SL).tmTheme",
 	"font_size": 10,
-	"ignored_packages": [],
+	"ignored_packages":
+	[
+	],
 	"rulers":
 	[
 		85,
