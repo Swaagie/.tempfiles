@@ -61,6 +61,12 @@ ifeq ($(shell which trimage), )
 	@sudo apt-get install trimage
 endif
 
+# Install phantomjs
+ifeq ($(shell which phantomjs), )
+	@echo "  - Installing phantomjs"
+	@sudo apt-get install phantomjs
+endif
+
 # Install gimp
 ifeq ($(shell which gimp), )
 	@echo "  - Installing gimp"
