@@ -1,16 +1,7 @@
 {
-	"color_scheme": "Packages/User/Flatland Monokai (SL).tmTheme",
-	"font_size": 9,
+	"color_scheme": "Packages/User/Monokai (SL).tmTheme",
 	"ignored_packages":
 	[
-	],
-	"rulers":
-	[
-		85,
-		120
-	],
-	"tab_size": 2,
-	"translate_tabs_to_spaces": true,
-	"trim_trailing_white_space_on_save": true,
-	"vintage_start_in_command_mode": true
+		"Vintage"
+	]
 }

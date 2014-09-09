@@ -73,6 +73,11 @@ ifeq ($(shell which gimp), )
 	@sudo apt-get install gimp
 endif
 
+# Install zsh
+@sudo apt-get install zsh
+@wget --no-check-certificate http://install.ohmyz.sh -O - | sh
+@chsh -s /bin/zsh
+
 # Installation:
 # Install all the .sh files and git submodules so our env. will be a bit easier
 # to work with, and it will look pretty as well <3.
@@ -103,13 +108,14 @@ symlink:
 	@ln -s -f $(CURDIR)/vim/.vimrc $(HOME)                                             # add the .vimrc
 	@ln -s -f $(CURDIR)/vim/.vim $(HOME)                                               # add the .vim directory
 	@ln -s -f $(CURDIR)/.jshintrc $(HOME)                                              # add the .jshintrc
+	@ln -s -f $(CURDIR)/.zshrc $(HOME)                                                 # add the .zshrc
 	@ln -s -f $(CURDIR)/.bash_aliases $(HOME)                                          # add the .bash_aliases
 	@ln -s -f $(HOME)/dotfiles/.js $(HOME)                                             # add the .js folder
 	@ln -s -f $(CURDIR)/.ssh/config $(HOME)/.ssh/config                                # some ssh defaults
 	@ln -s -f $(CURDIR)/gd.desktop $(HOME)/.config/autostart/                          # start git-dude at startup
 	@ln -s -f $(CURDIR)/djsd.desktop $(HOME)/.config/autostart/                        # start dotjs at startup
-  @ln -s -f $(CURDIR)/sublime-text-3/ $(HOME)/.config																 # link sublime3 config
   @sudo ln -s -f $(HOME)/projects/ /p                                                # create quick link to projects
+	@ln -s -f $(CURDIR)/sublime-text-3/ $(HOME)/.config                                # link sublime3 config
 
 uninstall:
 	@cd ./tools/dotjs && rake uninstall                                                # remove dotjs again
