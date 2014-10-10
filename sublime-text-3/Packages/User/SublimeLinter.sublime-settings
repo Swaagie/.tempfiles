@@ -11,7 +11,7 @@
 		"lint_mode": "background",
 		"linters":
 		{
-			"jslint":
+			"jshint":
 			{
 				"@disable": false,
 				"args":
@@ -20,9 +20,21 @@
 				"excludes":
 				[
 				]
+			},
+			"jslint":
+			{
+				"@disable": true,
+				"args":
+				[
+					"--config",
+					"/home/swaagie/.jshintrc"
+				],
+				"excludes":
+				[
+				]
 			}
 		},
-		"mark_style": "outline",
+		"mark_style": "none",
 		"no_column_highlights_line": false,
 		"paths":
 		{
